@@ -4,19 +4,17 @@
 <title>Akif DORA</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-/* make keyframes that tell the start state and the end state of our object */
- 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
  
 .fade-in {
-	opacity:0;  /* make things invisible upon start */
-	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+	opacity:0;  
+	-webkit-animation:fadeIn ease-in 1; 
 	-moz-animation:fadeIn ease-in 1;
 	animation:fadeIn ease-in 1;
  
-	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-webkit-animation-fill-mode:forwards;
 	-moz-animation-fill-mode:forwards;
 	animation-fill-mode:forwards;
  
@@ -224,14 +222,10 @@ li {
 </div>
 <script type="text/javascript" src="js/init.js"></script>
 <script>
-  // Bind to the click of all links with a #hash in the href
   $('a[href^="#"]').click(function(e) {
-    // Prevent the jump and the #hash from appearing on the address bar
     e.preventDefault();
-    // Scroll the window, stop any previous animation, stop on user manual scroll
-    // Check https://github.com/flesler/jquery.scrollTo for more customizability
     $(window).stop(true).scrollTo(this.hash, {duration:500, interrupt:false});
   });
   </script>
-  </body>
+ </body>
 </html>
