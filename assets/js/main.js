@@ -134,6 +134,22 @@
       preloader.remove()
     });
   }
+  
+   /**
+   * Title type effect
+   */
+     const ttyped = select('.ttyped')
+     if (ttyped) {
+       let ttyped_strings = ttyped.getAttribute('data-ttyped-items')
+       ttyped_strings = ttyped_strings.split(',')
+       new Typed('.ttyped', {
+         strings: ttyped_strings,
+         loop: true,
+         typeSpeed: 100,
+         backSpeed: 50,
+         backDelay: 2000
+       });
+     }
 
   /**
    * Hero type effect
